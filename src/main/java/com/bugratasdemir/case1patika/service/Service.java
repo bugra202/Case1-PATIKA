@@ -13,7 +13,7 @@ public class Service implements IService {
     @Override
     public void getFeaturesByHouseType(List<AbstractHouseType> houseTypeList) {
         houseTypeList.stream()
-                .map(AbstractHouseType::homeInfo)
+                .map(AbstractHouseType::toString)
                 .forEach(house -> System.out.println("Features of the Selected House Type = " + house));
     }
     @Override
@@ -28,7 +28,7 @@ public class Service implements IService {
     public void filterAllTypesOfHousesByNumberOfRoomsAndLivingRooms(List<AbstractHouseType> houseList, int numberOfRooms, int numberOfHalls) {
         houseList.stream()
                 .filter(house -> house.getNumberOfRooms() == numberOfRooms && house.getNumberOfHalls() == numberOfHalls)
-                .map(AbstractHouseType::homeInfo)
+                .map(AbstractHouseType::toString)
                 .forEach(house -> System.out.println("Features of the Selected House Type = " + house));
     }
 }

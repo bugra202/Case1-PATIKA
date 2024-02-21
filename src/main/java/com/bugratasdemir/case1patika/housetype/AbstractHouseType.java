@@ -14,14 +14,6 @@ public abstract class AbstractHouseType {
         this.numberOfRooms = numberOfRooms;
         this.numberOfHalls = numberOfHalls;
     }
-
-    public StringBuilder homeInfo(){
-        StringBuilder s = new StringBuilder();
-        s.append("Type : " + getType() + "," + " Price : " + getPrice() + "," +
-                " SquareMeters : " + getSquareMeters() + "," + " NumberOfRooms : " + getNumberOfRooms() + "," + " NumberOfHalls :" + getNumberOfHalls());
-        return s;
-    }
-
     public String getType() {
         return type;
     }
@@ -60,5 +52,15 @@ public abstract class AbstractHouseType {
 
     public void setNumberOfHalls(int numberOfHalls) {
         this.numberOfHalls = numberOfHalls;
+    }
+    @Override
+    public String toString() {
+        return "AbstractHouseType{" +
+                "type='" + type + '\'' +
+                ", price=" + price +
+                ", squareMeters=" + squareMeters +
+                ", numberOfRooms=" + numberOfRooms +
+                ", numberOfHalls=" + numberOfHalls +
+                '}';
     }
 }
