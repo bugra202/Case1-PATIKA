@@ -1,25 +1,15 @@
 package com.bugratasdemir.case1patika.housetype;
 
 public abstract class AbstractHouseType {
-    private String type;
     private int price;
     private int squareMeters;
     private int numberOfRooms;
     private int numberOfHalls;
-
-    public AbstractHouseType(String type, int price, int squareMeters, int numberOfRooms, int numberOfHalls) {
-        this.type = type;
+    public AbstractHouseType(int price, int squareMeters, int numberOfRooms, int numberOfHalls) {
         this.price = price;
         this.squareMeters = squareMeters;
         this.numberOfRooms = numberOfRooms;
         this.numberOfHalls = numberOfHalls;
-    }
-    public String getType() {
-        return type;
-    }
-
-    public void setType(String type) {
-        this.type = type;
     }
 
     public int getPrice() {
@@ -53,11 +43,11 @@ public abstract class AbstractHouseType {
     public void setNumberOfHalls(int numberOfHalls) {
         this.numberOfHalls = numberOfHalls;
     }
+
     @Override
     public String toString() {
         return "AbstractHouseType{" +
-                "type='" + type + '\'' +
-                ", price=" + price +
+                "price=" + price +
                 ", squareMeters=" + squareMeters +
                 ", numberOfRooms=" + numberOfRooms +
                 ", numberOfHalls=" + numberOfHalls +
