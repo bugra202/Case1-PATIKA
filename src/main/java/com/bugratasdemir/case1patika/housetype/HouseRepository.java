@@ -2,7 +2,7 @@ package com.bugratasdemir.case1patika.housetype;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.stream.Collectors;
+import java.util.stream.*;
 
 public class HouseRepository {
     List<Home> homeList = new ArrayList<>();
