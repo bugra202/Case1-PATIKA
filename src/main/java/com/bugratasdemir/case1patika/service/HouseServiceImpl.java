@@ -65,13 +65,6 @@ public class HouseServiceImpl implements HouseService {
                 .average()
                 .orElse(0.0);
     }
-//    private List<AbstractHouseType> filterAllTypesOfHousesByNumberOfRoomsAndLivingRooms(List<AbstractHouseType> houseList, int numberOfRooms, int numberOfHalls) {
-//        houseList.stream()
-//                .filter(house -> house.getNumberOfRooms() == numberOfRooms && house.getNumberOfHalls() == numberOfHalls)
-//                .map(AbstractHouseType::toString)
-//                .forEach(house -> System.out.println("Features of the Selected House Type = " + house));
-//        return houseList;
-//    }
     private List<AbstractHouseType> filterAllTypesOfHousesByNumberOfRoomsAndLivingRooms(
             List<AbstractHouseType> houseList, int numberOfRooms, int numberOfHalls) {
         return houseList.stream()
